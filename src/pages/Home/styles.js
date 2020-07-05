@@ -40,7 +40,8 @@ export default StyleSheet.create({
         height: '91%',
         backgroundColor: '#1D3570',
         paddingHorizontal: 25,
-        width: '100%'
+        width: '100%',
+
     },
     
     txtBody: {

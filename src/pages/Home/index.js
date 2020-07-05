@@ -14,6 +14,19 @@ export default function Home() {
         Rajdhani_400Regular, 
         Rajdhani_600SemiBold
       });
+
+      const navigation = useNavigation();
+
+      function navigateToNewsletter() {
+          navigation.navigate('Newsletter');
+      }
+
+        function navigateToEbooks() {
+        navigation.navigate('Ebooks');
+        }
+
+
+        
     
     if(!fontsLoaded){
         return <AppLoading />
@@ -34,7 +47,7 @@ export default function Home() {
                         <Text style={styles.txtNwTwo}>Newsletters</Text>
                         </View>
                         <View>
-                        <TouchableOpacity style={styles.arrow1}>
+                        <TouchableOpacity style={styles.arrow1} onPress={navigateToNewsletter}>
                             <Ionicons name="ios-arrow-dropright" size={50}/>
                         </TouchableOpacity>
                         </View>
@@ -45,7 +58,7 @@ export default function Home() {
                         <Text style={styles.txtNwTwo}>E-books</Text>
                         </View>
                         <View>
-                        <TouchableOpacity style={styles.arrow2}>
+                        <TouchableOpacity style={styles.arrow2} onPress={navigateToEbooks}>
                             <Ionicons name="ios-arrow-dropright" size={50}/>
                         </TouchableOpacity>
                         </View>

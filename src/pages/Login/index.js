@@ -19,9 +19,14 @@ export default function Login() {
     function navigateToHome() {
         navigation.navigate('Home');
     }
+
+    function navigateToForgotPassword() {
+        navigation.navigate('ForgotPassword');
+    }
     if (!fontsLoaded){
         return <AppLoading />
     } else {
+    
     return (
             <ScrollView style={styles.container}>
 
@@ -39,11 +44,11 @@ export default function Login() {
                 </View>
 
                 <View style={styles.footer}>
-                    <TouchableOpacity style={styles.btnPassword}>
-                        <Text style={styles.btnLoginText}>Esqueci a senha</Text>
+                    <TouchableOpacity style={styles.btnPassword} onPress={navigateToForgotPassword}>
+                        <Text style={styles.txtFooter}>Esqueci a senha</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.btnRegister}>
-                        <Text style={styles.btnLoginText}>Cadastrar</Text>
+                        <Text style={styles.txtFooter}>Cadastrar</Text>
                     </TouchableOpacity>
                 </View>
             </ScrollView>
