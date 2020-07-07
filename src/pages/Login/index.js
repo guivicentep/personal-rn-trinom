@@ -23,6 +23,11 @@ export default function Login() {
     function navigateToForgotPassword() {
         navigation.navigate('ForgotPassword');
     }
+
+    function navigateToRegister() {
+        navigation.navigate('Register');
+    }
+
     if (!fontsLoaded){
         return <AppLoading />
     } else {
@@ -47,7 +52,7 @@ export default function Login() {
                     <TouchableOpacity style={styles.btnPassword} onPress={navigateToForgotPassword}>
                         <Text style={styles.txtFooter}>Esqueci a senha</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.btnRegister}>
+                    <TouchableOpacity style={styles.btnRegister} onPress={navigateToRegister}>
                         <Text style={styles.txtFooter}>Cadastrar</Text>
                     </TouchableOpacity>
                 </View>
